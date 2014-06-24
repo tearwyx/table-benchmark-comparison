@@ -1,0 +1,13 @@
+.cell {
+	border: 1px solid green;
+}
+
+.input {
+	width: 70px;
+	border: 1px solid gray;
+}
+
+.label {
+	width: 70px;
+	border: 1px solid gray;
+}

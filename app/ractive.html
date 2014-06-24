@@ -1,0 +1,40 @@
+<html>
+	<head>
+
+		<title>Ractive.js Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/ractive.js"></script>
+
+		<script type="text/javascript" src="ractive.js"></script>
+
+		<script type="text/x-ractive" id="template">
+
+			<h1>Ractive.js Table Benchmark</h1>
+
+			<button onclick="setVar()">Set variable for first cell</button>
+
+			<table id="element">
+				{{#rows}}
+				<tr>
+					{{#cols}}
+					<td class="cell">
+						<input value="{{value}}" class="input" />
+						<div class="label">{{value}}</div>
+					</td>
+					{{/cols}}
+				</tr>
+				{{/rows}}
+			</table>
+
+		</script>
+
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+	<head>
+
+		<title>Ember.js Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/handlebars.js"></script>
+		<script type="text/javascript" src="../lib/ember.js"></script>
+
+		<script type="text/javascript" src="ember.js"></script>
+
+		<script type="text/x-handlebars" id="template" data-template-name="application">
+
+			<h1>Ember.js Table Benchmark</h1>
+
+			<button onclick="setVar();">Set variable for first cell</button>
+
+			<table>
+				{{#each controller.data.rows}}
+				<tr>
+					{{#each cols}}
+					<td class="cell">
+						{{input value=value class="input"}}
+						<div class="label">{{value}}</div>
+					</td>
+					{{/each}}
+				</tr>
+				{{/each}}
+			</table>
+
+		</script>
+
+	</head>
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<head>
+
+		<title>Knockout.js Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/knockout.js"></script>
+
+		<script type="text/javascript" src="knockout.js"></script>
+
+		<script type="text/x-knockout" id="template">
+
+			<h1>Knockout.js Table Benchmark</h1>
+
+			<button onclick="setVar()">Set variable for first cell</button>
+
+			<table data-bind="foreach: rows" id="element">
+				<tr data-bind="foreach: cols">
+					<td class="cell">
+						<input data-bind="value: value, valueUpdate: 'afterkeydown'" class="input" />
+						<div data-bind="text: value" class="label"></div>
+       		</td>
+				</tr>
+			</table>
+
+		</script>
+
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+	</body>
+</html>

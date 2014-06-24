@@ -1,0 +1,35 @@
+<html>
+	<head>
+
+		<title>Vue.js Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+		<script type="text/javascript" src="vue.js"></script>
+
+		<script type="text/x-vue" id="template">
+
+			<h1>Vue.js Table Benchmark</h1>
+	
+			<button onclick="setVar()">Set variable for first cell</button>
+	
+			<table id="element">
+				<tr v-repeat="rows">
+					<td v-repeat="cols" class="cell">
+						<input v-model="value" class="input" />
+						<div class="label">{{value}}</div>
+					</td>
+				</tr>
+			</table>
+
+		</script>
+
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+	</body>
+</html>

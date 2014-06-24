@@ -1,0 +1,38 @@
+<html ng-app="application">
+	<head>
+
+		<title>AngularJS Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/angular.js"></script>
+
+		<script type="text/javascript" src="angular.js"></script>
+
+		<script type="text/ng-template" id="template">
+
+			<h1>AngularJS Table Benchmark</h1>
+
+			<button onclick="setVar()">Set variable for first cell</button>
+
+			<table>
+				<tr ng-repeat="row in data.rows">
+					<td ng-repeat="col in row.cols" class="cell">
+						<input ng-model="col.value" class="input" />
+						<div class="label">{{col.value}}</div>
+					</td>
+				</tr>
+			</table>
+
+		</script>
+
+	</head>
+	<body>
+
+		<div ng-controller="controller">
+			<div ng-include src="'template'"></div>
+		</div>
+
+	</body>
+</html>

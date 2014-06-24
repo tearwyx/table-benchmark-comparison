@@ -1,0 +1,35 @@
+<html>
+	<head>
+
+		<title>Rivets.js Table Benchmark</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="../lib/rivets.js"></script>
+
+		<script type="text/javascript" src="rivets.js"></script>
+
+		<script type="text/x-rivets" id="template">
+
+			<h1>Rivets.js Table Benchmark</h1>
+
+			<button onclick="setVar();">Set variable for first cell</button>
+
+			<table id="element">
+				<tr rv-each-row="rows">
+					<td rv-each-col="row.cols" class="cell">
+						<input rv-value="col.value" class="input" />
+						<div class="label">{col.value}</div>
+					</td>
+				</tr>
+			</table>
+		</script>
+
+	</head>
+	<body>
+
+		<div id="container"></div>
+
+	</body>
+</html>
